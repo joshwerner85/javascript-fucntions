@@ -1,5 +1,5 @@
 
-
+ 
 /**
  * Part I: use any of the looping methods discussed in class
  *
@@ -14,7 +14,13 @@
 
 function forEach(array, callback){
     // YOUR CODE HERE
-
+    for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+         callback(array[i]);
+         //we need to call function "callback"
+         // a = the current array element
+         
+    }
 }
 
 // testing your code with console.assert
