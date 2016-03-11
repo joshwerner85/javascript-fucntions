@@ -119,30 +119,21 @@ console.assert( longest("this", "is", "a", "awesome", "function") === "function"
 // .sort()
 function sort(){
     var args = [].slice.call(arguments);
-    var sorted = args.sort();
-    
     args.sort();
-    console.log(args);
-    console.log(sorted);
-
-    return sorted + args;
-
+   return args;
 
 }    
+    console.assert(sort(1,2,3)[0] === 1);
 
-    var foods = ('ham');
-
-    var foods2 = ("ham");
-
-
-    console.assert (sort (foods) === foods2);
-    // console.assert( sort(4 === 4);
+    
+       
+     
 
 // .concat()
 
-function concat(){
-    var args = [].slice.call(arguments);
-}
+var letters =['a','b','c'], numbers = [1,2,3];
+var lettersandnumbers = letters.concat(numbers);
+console.assert(lettersandnumbers.length === (letters.length + numbers.length));
 
 // .indexOf()
 
@@ -152,46 +143,88 @@ function indexOf(){
 
 // .split()
 
-function split(){
-    var args = [].slice.call(arguments);
-}
+var names = 'ironman Hulk Thor spiderman hawkeye';
+var nameList = names.split(' ', 5);
+console.assert(nameList[0] === "ironman");
+console.assert(nameList[1] === "Hulk");
+console.assert(nameList[2] === "Thor");
+console.assert(nameList[3] === "spiderman");
+console.assert(nameList[4] === 'hawkeye');
+
 
 
 // .join()
 
-function join(){
-    var args = [].slice.call(arguments);
-}
+// var a = ['Wind', 'Rain', 'Fire'];
+// var myVar1 = a.join();      // assigns 'Wind,Rain,Fire' to myVar1
+// var myVar2 = a.join(', ');  // assigns 'Wind, Rain, Fire' to myVar2
+// var myVar3 = a.join(' + '); // assigns 'Wind + Rain + Fire' to myVar3
+// var myVar4 = a.join('');    // assigns 'WindRainFire' to myVar4
+
+// // console.log(myVar4);
+// // console.log(myVar3 + myVar3 + myVar1);
+
+// console.assert(myVar3 === myVar3);
 
 // .pop()
 
-function pop(){
-    var args = [].slice.call(arguments);
-}
+var myPopList = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var popped = myPopList.pop();
+
+console.assert(popped === 'sturgeon');
+
 
 // .push()
 
-function push(){
-    var args = [].slice.call(arguments);
-}
+var doPush = [3,3,5,3,3,2];
+var pushed = doPush.push(199,300,400);
+
+console.assert(pushed === 9);
 
 // .slice()
 
-function slice(){
-    var args = [].slice.call(arguments);
-}
+var breeds = ['AKITA', 'Beagal', 'Husky', 'Apple', 'Mango'];
+var dogs = breeds.slice(2, 3);
+
+// console.log(dogs[0] === 'Husky')
+
+console.assert(dogs[0] === 'Husky')
 
 // .splice()
 
-    function splice(){
-    var args = [].slice.call(arguments);
-}
+    var animals = ['dog', 'cat', 'bird', 'snake'];
+
+// removes 0 elements from index 2, and inserts 'drum'
+var removed = animals.splice(2, 0, 'lion');
+// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon']
+// removed is [], no elements removed
+
+
+
+console.assert(animals [0] === 'dog');
+console.assert(animals [1] === 'cat');
+console.assert(animals [2] === 'lion');
+console.assert(animals [3] === 'bird');
+console.assert(animals [4] === 'snake');
 
 // .shift()
 
-    function shift(){
-    var args = [].slice.call(arguments);
-}
+// var animals = ['dog', 'cat', 'bird', 'snake'];
+
+
+
+     var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+
+console.log('myFish before: ' + myFish);
+// "myFish before: angel,clown,mandarin,surgeon"
+
+var shifted = myFish.shift(); 
+
+console.log('myFish after: ' + myFish); 
+// "myFish after: clown,mandarin,surgeon" 
+
+console.log('Removed this element: ' + shifted); 
+// "Removed this element: angel"
 
 // .unshift()
 
