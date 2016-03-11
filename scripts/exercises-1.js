@@ -15,11 +15,11 @@
 function forEach(array, callback){
     // YOUR CODE HERE
     for (var i = 0; i < array.length; i++) {
-        console.log(array[i]);
+        //console.log(array[i]);
          callback(array[i]);
          //we need to call function "callback"
          // a = the current array element
-         
+
     }
 }
 
@@ -35,11 +35,13 @@ console.assert(total === 24);
 function sum(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
+    var total = 0;
+    for (var i =0; i < args.length; i++) {
+        total += args[i];
+    }
 
-    // .. do something with each element of args
-    // YOUR CODE HERE
+    return total;
 }
-
 console.assert( sum(1, 2, 3, 4, 5) === 15 )
 
 // 2. calculate the average of numbers (returns the average (A NUMBER))
@@ -48,8 +50,15 @@ function average(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
 
+
     // .. do something with each element of args
-    // YOUR CODE HERE
+    var args = [].slice.call(arguments);
+    var total = 0;
+    for (var i =0; i < args.length; i++) {
+        total += args[i];
+    }
+    var avg = total /args.length;
+    return avg;
 }
 
 console.assert( average(2, 4, 6, 8) === 5 )
@@ -59,7 +68,14 @@ console.assert( average(2, 4, 6, 8) === 5 )
 function largest(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
-
+    var biggestNum = 0;
+    for (var i =0; i < args.length; i++) {
+        if(args[i] > biggestNum) {
+            biggestNum = args [i];
+         }
+    }
+    
+    return biggestNum;
     // .. do something with each element of args
     // YOUR CODE HERE
 }
@@ -71,12 +87,25 @@ console.assert( largest(2, 4, 6, 8) === 8 )
 function longest(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
+    //console.log(args);
+
+    var theLongest = 0;
+    var longWord = " ";
+    for (var i=0; i < args.length; i++) {
+        if(args[i].length > theLongest){
+            longWord = args [i];
+        }
+        
+    }
+
+        return longWord;
+
 
     // .. do something with each element of args
     // YOUR CODE HERE
 }
 
- console.assert( longest("this", "is", "a", "awesome", "function") === "function" );
+console.assert( longest("this", "is", "a", "awesome", "function") === "function");
 
 /**
  * PART II
@@ -88,27 +117,96 @@ function longest(){
  */
 
 // .sort()
+function sort(){
+    var args = [].slice.call(arguments);
+    var sorted = args.sort();
+    
+    args.sort();
+    console.log(args);
+    console.log(sorted);
+
+    return sorted + args;
+
+
+}    
+
+    var foods = ('ham');
+
+    var foods2 = ("ham");
+
+
+    console.assert (sort (foods) === foods2);
+    // console.assert( sort(4 === 4);
 
 // .concat()
 
+function concat(){
+    var args = [].slice.call(arguments);
+}
+
 // .indexOf()
+
+function indexOf(){
+    var args = [].slice.call(arguments);
+}
 
 // .split()
 
+function split(){
+    var args = [].slice.call(arguments);
+}
+
+
 // .join()
+
+function join(){
+    var args = [].slice.call(arguments);
+}
 
 // .pop()
 
+function pop(){
+    var args = [].slice.call(arguments);
+}
+
 // .push()
+
+function push(){
+    var args = [].slice.call(arguments);
+}
 
 // .slice()
 
+function slice(){
+    var args = [].slice.call(arguments);
+}
+
 // .splice()
+
+    function splice(){
+    var args = [].slice.call(arguments);
+}
 
 // .shift()
 
+    function shift(){
+    var args = [].slice.call(arguments);
+}
+
 // .unshift()
+
+    function unshift(){
+    var args = [].slice.call(arguments);
+}
 
 // .filter()
 
+function filter(){
+    var args = [].slice.call(arguments);
+}
+
 // .map()
+
+function map(){
+    var args = [].slice.call(arguments);
+}
