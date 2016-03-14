@@ -241,10 +241,20 @@ console.log('Removed this element: ' + shifted);
 
 // .filter()
 
+function isBigEnough(value) {
+  return value >= 10;
+}
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// filtered is [12, 130, 44]
 
-
+console.assert(filtered = 10);
 
 
 // .map()
 
+
+var numbers = [14, 40, 90];
+var roots = numbers.map(Math.sqrt);
+
+console.assert(numbers = roots);
  
