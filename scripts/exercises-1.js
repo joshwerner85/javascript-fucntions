@@ -137,9 +137,10 @@ console.assert(lettersandnumbers.length === (letters.length + numbers.length));
 
 // .indexOf()
 
-function indexOf(){
-    var args = [].slice.call(arguments);
-}
+var array = [2, 9, 9];
+console.assert(array.indexOf(2) === 0);
+
+
 
 // .split()
 
@@ -155,16 +156,16 @@ console.assert(nameList[4] === 'hawkeye');
 
 // .join()
 
-// var a = ['Wind', 'Rain', 'Fire'];
-// var myVar1 = a.join();      // assigns 'Wind,Rain,Fire' to myVar1
-// var myVar2 = a.join(', ');  // assigns 'Wind, Rain, Fire' to myVar2
-// var myVar3 = a.join(' + '); // assigns 'Wind + Rain + Fire' to myVar3
-// var myVar4 = a.join('');    // assigns 'WindRainFire' to myVar4
+var a = ['Wind', 'Rain', 'Fire'];
+var myVar1 = a.join();      // assigns 'Wind,Rain,Fire' to myVar1
+var myVar2 = a.join(', ');  // assigns 'Wind, Rain, Fire' to myVar2
+var myVar3 = a.join(' + '); // assigns 'Wind + Rain + Fire' to myVar3
+var myVar4 = a.join('');    // assigns 'WindRainFire' to myVar4
 
-// // console.log(myVar4);
-// // console.log(myVar3 + myVar3 + myVar1);
+// console.log(myVar4);
+// console.log(myVar3 + myVar3 + myVar1);
 
-// console.assert(myVar3 === myVar3);
+console.log(myVar3 === myVar3);
 
 // .pop()
 
@@ -228,18 +229,22 @@ console.log('Removed this element: ' + shifted);
 
 // .unshift()
 
-    function unshift(){
-    var args = [].slice.call(arguments);
-}
+    var arr = [1, 2];
+
+    arr.unshift(0);
+
+    arr.unshift(-2, -1);
+
+    arr.unshift([-3]);
+
+    console.assert(arr.unshift = -3);
 
 // .filter()
 
-function filter(){
-    var args = [].slice.call(arguments);
-}
+
+
+
 
 // .map()
 
-function map(){
-    var args = [].slice.call(arguments);
-}
+ 
